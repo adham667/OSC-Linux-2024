@@ -1,0 +1,18 @@
+git config --global user.name "adham"
+git config --global user.email "adhamsaeed667@gmail.com"
+git clone https://github.com/adham667/OSC-Linux-2024.git
+cd OSC-Linux-2024/
+mkdir task-2
+cd task-2
+echo "hello world" >> greeting.txt
+git add .
+git commit -m "Added greeting"
+git checkout -b intro
+echo "I love Git" >> greeting.txt
+git add .
+git commit -m "Added I love Git"
+git checkout master
+git merge intro
+git tag v1
+
+
