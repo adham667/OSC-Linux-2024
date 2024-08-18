@@ -13,6 +13,7 @@ git add .
 git commit -m "Added I love Git"
 git checkout master
 git merge intro
-git tag v1
+git tag -a v1
+git push
 
 
