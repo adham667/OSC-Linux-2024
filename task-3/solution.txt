@@ -25,5 +25,5 @@ date >> summary.txt
 wc -l summary.txt | tee >> summary.txt
 wc -w reports/report1.md
 wc -c logs/system.log | tee >> summary.txt
-ls | wc -l | tee >> summary.txt
+find ~/project_files | wc -l | tee >> summary.txt
 cat summary.txt
