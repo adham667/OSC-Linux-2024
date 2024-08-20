@@ -1,0 +1,29 @@
+cd ~
+mkdir project_files
+cd project_files
+mkdir reports logs data
+touch reports/report1.md reports/report2.md
+touch logs/system.log logs/error.log logs/file1.pdf logs/file2.pdf
+touch data/data.csv data/info.txt
+nano reports/report logs/system.log data/data.csv
+cd logs
+tar -czf logs_backup.tar.gz *
+mv logs_backup.tar.gz ~/project_files/
+cd ..
+tar -xzf logs_backup.tar.gz -C  ~/project_files/logs
+find ~ -name  "*.md"
+find . -name "*.log"
+find . -name "file1.pdf"
+find . -iname "*.pdf"
+find ./logs/ -type f
+ln -s data/data.csv link_data.csv
+echo "new data" >>  link_data.csv
+cat link_data.csv
+unlink link_data.csv
+echo "Summary Start" >> summary.txt
+date >> summary.txt
+wc -l summary.txt | tee >> summary.txt
+wc -w reports/report1.md
+wc -c logs/system.log | tee >> summary.txt
+ls | wc -l | tee >> summary.txt
+cat summary.txt
