@@ -1,6 +1,7 @@
 sudo useradd -m newuser
 sudo groupadd newgroup
 sudo usermod -aG newgroup newuser
+cat /etc/group
 mkdir ~/task_dir
 cd ~/task_dir/
 touch sample.txt
