@@ -1,2 +1,2 @@
 cut -d , -f 2 info.csv | sort | uniq | tee > emails.txt
-ps -o pid,cmd --sort cmd | tee > processes.txt
+ps -eo pid,cmd --sort cmd | tee > processes.txt
